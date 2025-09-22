@@ -5,7 +5,7 @@ export default async (ssr: boolean = true) => {
   const { path } = useRoute()
 
   const nuxtApp = useNuxtApp()
-  const { data, error, refresh } = await useFetch('/content/1', {
+  const { data, error, refresh } = await useFetch(`/content/${path}`, {
     server: ssr,
     transform(input : unknown) {
       return {
