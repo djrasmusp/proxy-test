@@ -1,8 +1,6 @@
 <template>
   <div>
-    <NuxtLink to="/">Index</NuxtLink><br>
-    <NuxtLink to="/1">Page1</NuxtLink><br>
-    <NuxtLink to="/2">Page2</NuxtLink><br>
+    <NuxtLink v-for="index in 10" :to="`/${index}`" :key="index">Page {{ index}}</NuxtLink><br>
   <div>
     {{ data }}
   </div>

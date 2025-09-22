@@ -7,7 +7,7 @@
 
 <template>
 <div>
-    <h1>Page2</h1>
+  <h1>{{ pageData?.title }}</h1>
     --------<br>
     {{ pageData }}
 </div>

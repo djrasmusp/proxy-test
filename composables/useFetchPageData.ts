@@ -13,7 +13,7 @@ export default async (ssr: boolean = true) => {
   } = await useAsyncData(
     `pageData-${path}`,
     () =>
-      $fetch(`/content/${path}`, {
+      $fetch(`/content/${path.replace('/', '') ?? 1}`, {
       }).then(input => ({
           ...(input as Record<string, unknown>),
         fetchedAt: new Date()
